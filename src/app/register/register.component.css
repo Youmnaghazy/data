@@ -1,0 +1,23 @@
+.card{
+  background-color: rgb(195, 195, 195);
+
+}
+.submit-button{
+  background-color: #153049;
+  color: white;
+}
+.submit-button:hover{
+  background-color: rgb(195, 195, 195);
+  border: 1px solid #153049;
+}
+#alert
+{
+background-color: rgb(75, 2, 2);
+color: white;
+padding: .5em;
+border-radius: .5em;
+-webkit-border-radius: .5em;
+-moz-border-radius: .5em;
+-ms-border-radius: .5em;
+-o-border-radius: .5em;
+}

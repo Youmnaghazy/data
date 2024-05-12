@@ -1,0 +1,39 @@
+<section class="login">
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="login-image">
+                    <img class="w-100" src="./assets/images/login.jpg" alt="" srcset="">
+                </div>
+            </div>
+            <div class="col-md-6 d-flex align-items-center justify-content-center">
+                <div class="login-form  w-100">
+                    <form [formGroup]="login" (ngSubmit)="handleLogin(login)">
+                        <div id="alert" *ngIf="apiError">
+                            <h2>{{apiError}}</h2>
+                        </div>
+                        <label for="email">Email:</label>
+                        <input formControlName="email" class="form-control mb-2" id="email" type="text">
+                        <div id="alert" *ngIf="login.get('email')?.errors && login.get('email')?.touched">
+                            <p *ngIf="login.get('email')?.getError('required')">Email are required !</p>
+                            <p *ngIf="login.get('email')?.getError('email')">Email are incorrect !</p>
+                         </div>
+
+                        <label for="password">Password:</label>
+                        <input formControlName="password" class="form-control mb-2" id="password" type="password">
+                        <div id="alert" *ngIf="login.get('password')?.errors && login.get('password')?.touched">
+                            <p *ngIf="login.get('password')?.getError('required')">Password are required !</p>
+                            <p *ngIf="login.get('password')?.getError('pattern')">Password must begin with uppercase and following at least 8 charecters and numbers!</p>
+                        </div>
+
+                        <button [disabled]="login.invalid" type="submit" class="btn login-button my-2 w-100 d-block">
+                            <i *ngIf="flag" class="fas fa-spinner fa-spin"></i>
+                            <span *ngIf="!flag">Login</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

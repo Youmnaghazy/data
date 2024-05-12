@@ -1,0 +1,22 @@
+
+.login-button{
+  background-color:#153049;
+  color: white;
+}
+.login-button:hover{
+  background-color:rgb(195, 195, 195);
+  border: 1px solid#153049;
+}
+
+#alert{
+    padding: 0.5em;
+    display: flex;
+    align-items: center;
+    background-color: rgb(75, 2, 2);
+    color: #FEFBF3;
+    border-radius: 0.4em;
+    -webkit-border-radius: 0.4em;
+    -moz-border-radius: 0.4em;
+    -ms-border-radius: 0.4em;
+    -o-border-radius: 0.4em;
+}
